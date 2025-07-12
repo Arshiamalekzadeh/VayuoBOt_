@@ -1,4 +1,3 @@
-
 from pyrogram import Client, filters
 from pyrogram.types import Message
 import os
@@ -6,7 +5,11 @@ import os
 api_id = 1137903
 api_hash = "6007f2a379420aa71e6ad8de2aa32c299b947017429868ca01c20fe2cf3ce5ce"
 bot_token = os.getenv("BOT_TOKEN")
-destination_channel = int(os.getenv("DEST_CHANNEL"))
+
+dest_channel_str = os.getenv("DEST_CHANNEL")
+if not dest_channel_str:
+    raise ValueError("Environment variable DEST_CHANNEL is not set.")
+destination_channel = int(dest_channel_str)
 
 app = Client("vayuo_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
