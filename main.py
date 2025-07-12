@@ -18,7 +18,7 @@ app = Client("vayuo_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 # تابعی برای ارسال پیام به کانال در زمان استارت بات
 async def on_start():
-    await app.send_message(destination_channel, "🔹 بات به طور موفقیت‌آمیز شروع شد. آماده دریافت فایل‌ها هستم.")
+    await app.send_message(destination_channel, "🔹 دلامممممممممممممممممممممممممم")
 
 # استفاده از متد run به جای start
 @app.on_message(filters.private & (filters.audio | filters.video | filters.document | filters.photo))
@@ -40,4 +40,4 @@ async def handle_file(client, message: Message):
     await message.reply("✅ فایل بدون کپشن به کانال ارسال شد.")
 
 # راه‌اندازی بات و ارسال پیام شروع
-app.run()
+app.run()  # اینجا فقط از `app.run()` استفاده می‌کنیم
