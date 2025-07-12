@@ -19,7 +19,7 @@ app = Client("vayuo_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 # ارسال پیام به کانال زمانی که بات استارت می‌خورد
 @app.on_start
 async def on_start(client):
-    await client.send_message(destination_channel, "🔹 بات به طور موفقیت‌آمیز شروع شد. آماده دریافت فایل‌ها هستم.")
+    await client.send_message(destination_channel, "🔹  دلاممممممم بات به طور موفقیت‌آمیز شروع شد. آماده دریافت فایل‌ها هستم.")
 
 @app.on_message(filters.private & (filters.audio | filters.video | filters.document | filters.photo))
 async def handle_file(client, message: Message):
