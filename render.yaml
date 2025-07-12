@@ -1,0 +1,13 @@
+
+services:
+  - type: web
+    name: vayuo-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: BOT_TOKEN
+        value: 8107188592:AAFCikGCt6wwhWRPCx83e0xzpJTlsFtiC6k
+      - key: DEST_CHANNEL
+        value: "-1002659890273"
